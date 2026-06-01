@@ -29,15 +29,16 @@
     body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
 
     /* ── Hero ── */
-    .hero { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); color: #fff; text-align: center; padding: 72px 20px 100px; }
-    .hero-logo { width: 90px; height: 90px; object-fit: contain; margin-bottom: 10px; filter: drop-shadow(0 4px 10px rgba(0,0,0,.3)); transition: transform .3s; }
-    .hero-logo:hover { transform: scale(1.07); }
-    .hero-avatar { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,.6); box-shadow: 0 4px 16px rgba(0,0,0,.3); margin: 12px auto 6px; display: block; transition: transform .3s; }
-    .hero-avatar:hover { transform: scale(1.05); }
-    .hero .badge { display: inline-block; background: rgba(255,255,255,.15); padding: 5px 16px; border-radius: 20px; font-size: .85rem; font-weight: 500; letter-spacing: .5px; margin-bottom: 14px; }
-    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
-    .hero .subtitle { font-size: 1.1rem; font-weight: 300; opacity: .9; max-width: 600px; margin: 0 auto 14px; }
-    .hero .dev-name { font-size: .92rem; opacity: .75; }
+    .hero { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); color: #fff; text-align: center; padding: 64px 20px 96px; }
+    .hero-avatar { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,.7); box-shadow: 0 8px 32px rgba(0,0,0,.25); margin: 0 auto 20px; display: block; transition: transform .3s; }
+    .hero-avatar:hover { transform: scale(1.04); }
+    .hero .badge { display: inline-block; background: rgba(255,255,255,.15); padding: 5px 16px; border-radius: 20px; font-size: .82rem; font-weight: 500; letter-spacing: .5px; margin-bottom: 12px; }
+    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.4rem; font-weight: 800; letter-spacing: -.5px; margin-bottom: 4px; }
+    .hero .dev-th { font-size: 1.1rem; font-family: 'Prompt', sans-serif; opacity: .9; margin-bottom: 12px; }
+    .hero .subtitle { font-size: 1rem; font-weight: 300; opacity: .8; max-width: 520px; margin: 0 auto 24px; line-height: 1.6; }
+    .hero-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+    .hero-link { display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: 24px; font-size: .85rem; font-weight: 600; text-decoration: none; transition: .2s; border: 2px solid rgba(255,255,255,.5); color: #fff; background: rgba(255,255,255,.12); }
+    .hero-link:hover { background: rgba(255,255,255,.25); border-color: #fff; }
 
     /* ── Layout ── */
     .main { max-width: 960px; margin: -48px auto 60px; padding: 0 20px; }
@@ -116,12 +117,16 @@
 <body>
 
 <section class="hero">
-  <img class="hero-logo" src="https://maechada2024.github.io/chochada-sme-assistant/docs/asset/image/ccd-logo-gold.png" alt="MaeChada logo" />
-  <div><span class="badge">OFFICIAL DEVELOPER PROFILE</span></div>
+  <span class="badge">OFFICIAL DEVELOPER PROFILE</span>
   <img class="hero-avatar" src="avatar.jpg" alt="Chadchadaporn Pukkaew — MaeChada" />
-  <h1>MaeChada</h1>
-  <p class="subtitle">Empowering Micro-Entrepreneurs Through Smart, Intuitive Digital Solutions</p>
-  <p class="dev-name">ชัชฎาพร ปุกแก้ว · Chadchadaporn Pukkaew · แม่ชฎา · Thailand 🇹🇭</p>
+  <h1>Chadchadaporn Pukkaew</h1>
+  <p class="dev-th">ชัชฎาพร ปุกแก้ว · MaeChada (แม่ชฎา) · Thailand 🇹🇭</p>
+  <p class="subtitle">Mobile App Developer &amp; Data Analyst<br/>Empowering micro-entrepreneurs with smart, offline-first digital tools</p>
+  <div class="hero-links">
+    <a class="hero-link" href="mailto:dr.chadchadaporn@gmail.com">✉ Email</a>
+    <a class="hero-link" href="https://github.com/maechada2024" target="_blank">⌥ GitHub</a>
+    <a class="hero-link" href="https://maechada2024.github.io/chochada-sme-assistant/docs/privacy-ccd-sme-assistant.html" target="_blank">🔒 Privacy Policy</a>
+  </div>
 </section>
 
 <main class="main">
