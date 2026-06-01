@@ -30,8 +30,10 @@
 
     /* ── Hero ── */
     .hero { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); color: #fff; text-align: center; padding: 72px 20px 100px; }
-    .hero img { width: 110px; height: 110px; object-fit: contain; margin-bottom: 16px; filter: drop-shadow(0 4px 10px rgba(0,0,0,.3)); transition: transform .3s; }
-    .hero img:hover { transform: scale(1.07); }
+    .hero-logo { width: 90px; height: 90px; object-fit: contain; margin-bottom: 10px; filter: drop-shadow(0 4px 10px rgba(0,0,0,.3)); transition: transform .3s; }
+    .hero-logo:hover { transform: scale(1.07); }
+    .hero-avatar { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,.6); box-shadow: 0 4px 16px rgba(0,0,0,.3); margin: 12px auto 6px; display: block; transition: transform .3s; }
+    .hero-avatar:hover { transform: scale(1.05); }
     .hero .badge { display: inline-block; background: rgba(255,255,255,.15); padding: 5px 16px; border-radius: 20px; font-size: .85rem; font-weight: 500; letter-spacing: .5px; margin-bottom: 14px; }
     .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
     .hero .subtitle { font-size: 1.1rem; font-weight: 300; opacity: .9; max-width: 600px; margin: 0 auto 14px; }
@@ -114,11 +116,12 @@
 <body>
 
 <section class="hero">
-  <img src="https://maechada2024.github.io/chochada-sme-assistant/docs/asset/image/ccd-logo-gold.png" alt="MaeChada logo" />
+  <img class="hero-logo" src="https://maechada2024.github.io/chochada-sme-assistant/docs/asset/image/ccd-logo-gold.png" alt="MaeChada logo" />
   <div><span class="badge">OFFICIAL DEVELOPER PROFILE</span></div>
+  <img class="hero-avatar" src="avatar.jpg" alt="Chadchadaporn Pukkaew — MaeChada" />
   <h1>MaeChada</h1>
   <p class="subtitle">Empowering Micro-Entrepreneurs Through Smart, Intuitive Digital Solutions</p>
-  <p class="dev-name">Chadchadaporn Pukkaew (ฉัตรฉดาภรณ์ ภูแก้ว) · แม่ชฎา · Thailand 🇹🇭</p>
+  <p class="dev-name">ชัชฎาพร ปุกแก้ว · Chadchadaporn Pukkaew · แม่ชฎา · Thailand 🇹🇭</p>
 </section>
 
 <main class="main">
