@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaeChada - Official Developer Profile</title>
+    <!-- นำเข้าฟอนต์พรีเมียม Montserrat และ Inter ตามอัตลักษณ์แบรนด์ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-cream: #FBF3E8;
+            --main-teal: #00796B;
+            --dark-teal: #004D40;
+            --text-dark: #2C3E50;
+            --text-muted: #566573;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Section ส่วนแนะนำตัวด้านบน */
+        .hero {
+            background: linear-gradient(135deg, var(--main-teal) 0%, var(--dark-teal) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1000px;
+            margin: -40px auto 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--main-teal);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--main-teal);
+            padding-left: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            text-align: justify;
+        }
+
+        /* Grid แสดงโปรเจคแอปพลิเคชัน */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background-color: var(--bg-cream);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--main-teal);
+        }
+
+        .project-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-teal);
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .project-card li {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* ปุ่มลิงก์ไปยังหน้านโยบายความเป็นส่วนตัว */
+        .btn-link {
+            display: inline-block;
+            background-color: var(--main-teal);
+            color: var(--white);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-link:hover {
+            background-color: var(--dark-teal);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive สำหรับหน้าจอมือถือ */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .card { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero ส่วนหัวของหน้าโปรไฟล์ผู้พัฒนา -->
+    <section class="hero">
+        <div class="hero-container">
+            <span class="badge">OFFICIAL DEVELOPER PROFILE</span>
+            <h1 style="margin-top: 15px;">MaeChada</h1>
+            <p>Empowering Micro-Entrepreneurs Through Smart, Intuitive Digital Solutions</p>
+        </div>
+    </section>
+
+    <!-- ส่วนเนื้อหาหลัก -->
+    <main class="main-content">
+        
+        <!-- ข้อมูลเกี่ยวกับผู้พัฒนา (About the Developer) -->
+        <div class="card">
+            <h2>About MaeChada</h2>
+            <p><strong>MaeChada (แม่ชฎา)</strong> is a forward-thinking digital solution creator, data analyst, and technology mentor dedicated to bridging the gap between advanced technology and small business operations. Backed by extensive experience in Information Systems and Artificial Intelligence, MaeChada specializes in engineering efficient, user-centric tools designed with a <em>"Zero-Learning Curve"</em> philosophy.</p>
+            <p>Our mission is to empower micro-entrepreneurs, roadside food vendors, weekend market stalls, and artisan bakeries with intelligent mobile applications that streamline daily tasks, eliminate administrative overhead, and maximize profitability—all without requiring complex technical training or reliable internet access.</p>
+        </div>
+
+        <!-- รายการผลิตภัณฑ์/แอปพลิเคชัน (Our Applications) -->
+        <div class="card">
+            <h2>Featured Applications</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <h3>CHO-CHA-DA SME Assistant (v1.0)</h3>
+                    <p>An offline-first Point of Sale (POS) and inventory companion tailored for retail booths, street food stalls, and bakeries. It enables vendors to execute error-free checkouts and stock updates within 5 seconds.</p>
+                    <strong>Key Subsystems:</strong>
+                    <ul>
+                        <li><strong>Scan & Sell Terminal:</strong> Instant QR-code order building with a built-in double-scan prevention slider (1-5 seconds).</li>
+                        <li><strong>Local Inventory Tracker:</strong> Smart low-stock visual alerts and raw materials auditing.</li>
+                        <li><strong>Secure Ecosystem:</strong> Enterprise-grade 6-digit PIN and biometric fingerprint verification.</li>
+                        <li><strong>Data Independence:</strong> 100% offline database storage with Excel-compatible CSV data backup.</li>
+                    </ul>
+                    <!-- ลิงก์ไปยังหน้า Privacy Policy และ คู่มือที่จำเป็นต้องใช้ควบคู่กันบนสโตร์ -->
+                    <a href="privacy-policy.html" class="btn-link">View Privacy Policy & User Manual</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ข้อมูลติดต่อและการปฏิบัติตามเกณฑ์ (Contact & Compliance) -->
+        <div class="card">
+            <h2>Developer Compliance & Legal</h2>
+            <p>We strictly prioritize data privacy and application safety. All data handled by applications developed under the <strong>MaeChada</strong> brand is isolated locally on the user's mobile hardware to ensure ultimate business confidentiality and security.</p>
+            <p>For support inquiries, system audits, or application feedback, please access our official repositories or contact our development team through the designated store support channels.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Copyright © 2026 MaeChada. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
