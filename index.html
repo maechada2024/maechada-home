@@ -1,233 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaeChada - Official Developer Profile</title>
-    <!-- นำเข้าฟอนต์พรีเมียม Montserrat และ Inter ตามอัตลักษณ์แบรนด์ -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-cream: #FBF3E8;
-            --main-teal: #00796B;
-            --dark-teal: #004D40;
-            --text-dark: #2C3E50;
-            --text-muted: #566573;
-            --white: #FFFFFF;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MaeChada — Official Developer Profile</title>
+  <meta name="description" content="MaeChada (แม่ชฎา) — Mobile app developer specialising in offline-first tools for micro-entrepreneurs and small businesses." />
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <link rel="icon" type="image/png" href="https://maechada2024.github.io/chochada-sme-assistant/docs/asset/image/ccd-logo-black.png" />
+  <link rel="apple-touch-icon" href="https://maechada2024.github.io/chochada-sme-assistant/docs/asset/image/ccd-logo-black.png" />
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-cream);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&family=Prompt:wght@400;600&display=swap" rel="stylesheet" />
 
-        /* Hero Section ส่วนแนะนำตัวด้านบน */
-        .hero {
-            background: linear-gradient(135deg, var(--main-teal) 0%, var(--dark-teal) 100%);
-            color: var(--white);
-            padding: 80px 20px;
-            text-align: center;
-        }
+  <style>
+    :root {
+      --cream:     #FBF3E8;
+      --coffee:    #3B2B24;
+      --teal:      #00796B;
+      --teal-dark: #004D40;
+      --teal-light:#E0F2F1;
+      --card:      #FFFFFF;
+      --border:    #E8D9C8;
+      --muted:     #7a6a62;
+      --text:      #2C3E50;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
 
-        .hero-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    /* ── Hero ── */
+    .hero { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); color: #fff; text-align: center; padding: 72px 20px 100px; }
+    .hero img { width: 110px; height: 110px; object-fit: contain; margin-bottom: 16px; filter: drop-shadow(0 4px 10px rgba(0,0,0,.3)); transition: transform .3s; }
+    .hero img:hover { transform: scale(1.07); }
+    .hero .badge { display: inline-block; background: rgba(255,255,255,.15); padding: 5px 16px; border-radius: 20px; font-size: .85rem; font-weight: 500; letter-spacing: .5px; margin-bottom: 14px; }
+    .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+    .hero .subtitle { font-size: 1.1rem; font-weight: 300; opacity: .9; max-width: 600px; margin: 0 auto 14px; }
+    .hero .dev-name { font-size: .92rem; opacity: .75; }
 
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
+    /* ── Layout ── */
+    .main { max-width: 960px; margin: -48px auto 60px; padding: 0 20px; }
+    .card { background: var(--card); border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,.06); padding: 36px 40px; margin-bottom: 28px; }
+    .card h2 { font-family: 'Montserrat', sans-serif; color: var(--teal); font-size: 1.45rem; border-left: 5px solid var(--teal); padding-left: 14px; margin-bottom: 18px; }
+    .card p { margin-bottom: 14px; }
+    .card ul { padding-left: 20px; margin: 8px 0 14px; }
+    .card li { margin-bottom: 6px; font-size: .95rem; }
+    .card a { color: var(--teal); }
 
-        .hero p {
-            font-size: 1.25rem;
-            font-weight: 300;
-            opacity: 0.9;
-            margin-bottom: 25px;
-            color: var(--white);
-        }
+    /* ── App card ── */
+    .app-card { background: var(--cream); border-radius: 12px; border-left: 4px solid var(--teal); padding: 24px 28px; margin-top: 20px; }
+    .app-header { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; flex-wrap: wrap; }
+    .app-icon { width: 64px; height: 64px; border-radius: 14px; object-fit: contain; background: var(--card); padding: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.1); flex-shrink: 0; }
+    .app-header-info h3 { font-family: 'Montserrat', sans-serif; color: var(--teal-dark); font-size: 1.2rem; margin-bottom: 2px; }
+    .app-header-info .ver { font-size: .8rem; color: var(--muted); }
+    .app-header-info .app-id { font-size: .78rem; color: var(--muted); font-family: monospace; }
 
-        .badge {
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.15);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
+    /* ── Tag badges ── */
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+    .tag { background: var(--teal-light); color: var(--teal-dark); font-size: .78rem; font-weight: 600; padding: 3px 12px; border-radius: 20px; }
 
-        /* Main Content */
-        .main-content {
-            max-width: 1000px;
-            margin: -40px auto 40px auto;
-            padding: 0 20px;
-        }
+    /* ── Buttons ── */
+    .btn-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 20px; border-radius: 8px; font-size: .88rem; font-weight: 600; text-decoration: none; transition: .2s; }
+    .btn-outline { border: 2px solid var(--teal); color: var(--teal); background: transparent; }
+    .btn-outline:hover { background: var(--teal-light); }
+    .store-badge { display: inline-flex; align-items: center; gap: 8px; background: #111; color: #fff; padding: 8px 18px; border-radius: 8px; font-size: .85rem; font-weight: 500; text-decoration: none; }
+    .store-badge svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
 
-        .card {
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-        }
+    /* ── Feature grid ── */
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+    .feature-item { background: var(--card); border-radius: 10px; padding: 14px 16px; border: 1px solid var(--border); }
+    .feature-item .icon { font-size: 1.4rem; margin-bottom: 6px; }
+    .feature-item h4 { font-size: .9rem; font-weight: 600; color: var(--teal-dark); margin-bottom: 4px; }
+    .feature-item p { font-size: .83rem; color: var(--muted); margin: 0; }
 
-        h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--main-teal);
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-            border-left: 5px solid var(--main-teal);
-            padding-left: 15px;
-        }
+    /* ── Tech stack ── */
+    .stack-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .pill { background: var(--coffee); color: #fff; font-size: .78rem; font-weight: 500; padding: 4px 14px; border-radius: 20px; }
 
-        p {
-            margin-bottom: 20px;
-            color: var(--text-dark);
-            text-align: justify;
-        }
+    /* ── Compliance ── */
+    .compliance-list { list-style: none; padding: 0; margin-top: 14px; }
+    .compliance-list li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: .93rem; }
+    .compliance-list li:last-child { border: none; }
+    .compliance-list .check { color: var(--teal); font-weight: 700; font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
 
-        /* Grid แสดงโปรเจคแอปพลิเคชัน */
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin-top: 20px;
-        }
+    /* ── Support table ── */
+    .support-table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: .92rem; }
+    .support-table th { background: var(--teal); color: #fff; padding: 10px 14px; text-align: left; }
+    .support-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+    .support-table tr:last-child td { border: none; }
+    .support-table tr:nth-child(even) td { background: var(--cream); }
 
-        .project-card {
-            background-color: var(--bg-cream);
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid var(--main-teal);
-        }
+    /* ── Contact grid ── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 12px; }
+    .contact-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .contact-item h4 { font-size: .9rem; font-weight: 600; color: var(--teal-dark); margin-bottom: 2px; }
+    .contact-item p, .contact-item a { font-size: .9rem; color: var(--muted); text-decoration: none; }
+    .contact-item a:hover { color: var(--teal); }
 
-        .project-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--dark-teal);
-            margin-bottom: 10px;
-            font-size: 1.25rem;
-        }
+    /* ── Footer ── */
+    footer { background: var(--coffee); color: rgba(255,255,255,.8); text-align: center; padding: 36px 20px; font-size: .85rem; line-height: 2.2; }
+    footer a { color: #a5d6d0; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
-        .project-card ul {
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-
-        .project-card li {
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
-
-        /* ปุ่มลิงก์ไปยังหน้านโยบายความเป็นส่วนตัว */
-        .btn-link {
-            display: inline-block;
-            background-color: var(--main-teal);
-            color: var(--white);
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 500;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-link:hover {
-            background-color: var(--dark-teal);
-        }
-
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            
-            margin: 0 auto;         
-            width: 100%;
-            max-width: 1000px;
-        }
-
-        /* Responsive สำหรับหน้าจอมือถือ */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.1rem; }
-            .card { padding: 25px 20px; }
-        }
-    </style>
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .card { padding: 24px 18px; }
+      .features, .contact-grid { grid-template-columns: 1fr; }
+      .app-header-info .app-id { display: none; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Hero ส่วนหัวของหน้าโปรไฟล์ผู้พัฒนา -->
-    <section class="hero">
-        <div class="hero-container">
-            <span class="badge">OFFICIAL DEVELOPER PROFILE</span>
-            <h1 style="margin-top: 15px;">MaeChada</h1>
-            <p>Empowering Micro-Entrepreneurs Through Smart, Intuitive Digital Solutions</p>
+<section class="hero">
+  <img src="https://maechada2024.github.io/chochada-sme-assistant/docs/asset/image/ccd-logo-gold.png" alt="MaeChada logo" />
+  <div><span class="badge">OFFICIAL DEVELOPER PROFILE</span></div>
+  <h1>MaeChada</h1>
+  <p class="subtitle">Empowering Micro-Entrepreneurs Through Smart, Intuitive Digital Solutions</p>
+  <p class="dev-name">Chadchadaporn Pukkaew (ฉัตรฉดาภรณ์ ภูแก้ว) · แม่ชฎา · Thailand 🇹🇭</p>
+</section>
+
+<main class="main">
+
+  <!-- About -->
+  <div class="card">
+    <h2>About the Developer</h2>
+    <p><strong>MaeChada (แม่ชฎา)</strong>, founded by <strong>Chadchadaporn Pukkaew</strong>, is an independent mobile application developer and data analyst specialising in offline-first tools for micro-entrepreneurs and small businesses. With a background in Information Systems and Artificial Intelligence, MaeChada engineers practical solutions guided by a <em>"Zero-Learning Curve"</em> design philosophy.</p>
+    <p>Our target users — coffee shops, street-food vendors, weekend market stalls, and home-based entrepreneurs — deserve the same powerful tools as large enterprises, built for real-world conditions with limited connectivity and varying levels of digital literacy.</p>
+    <div class="stack-pills">
+      <span class="pill">Flutter / Dart</span>
+      <span class="pill">Android</span>
+      <span class="pill">iOS</span>
+      <span class="pill">Firebase (SaaS roadmap)</span>
+      <span class="pill">Information Systems</span>
+      <span class="pill">Artificial Intelligence</span>
+    </div>
+  </div>
+
+  <!-- Apps -->
+  <div class="card">
+    <h2>Published Applications</h2>
+
+    <div class="app-card">
+      <div class="app-header">
+        <img class="app-icon"
+             src="https://maechada2024.github.io/chochada-sme-assistant/docs/asset/image/ccd-logo-gold.png"
+             alt="SME Assistant icon" />
+        <div class="app-header-info">
+          <h3>SME Assistant</h3>
+          <div class="ver">Version 1.0.0 · June 2026</div>
+          <div class="app-id">com.maechada.smeassistant</div>
         </div>
-    </section>
+      </div>
 
-    <!-- ส่วนเนื้อหาหลัก -->
-    <main class="main-content">
-        
-        <!-- ข้อมูลเกี่ยวกับผู้พัฒนา (About the Developer) -->
-        <div class="card">
-            <h2>About MaeChada</h2>
-            <p><strong>MaeChada (แม่ชฎา)</strong> is a forward-thinking digital solution creator, data analyst, and technology mentor dedicated to bridging the gap between advanced technology and small business operations. Backed by extensive experience in Information Systems and Artificial Intelligence, MaeChada specializes in engineering efficient, user-centric tools designed with a <em>"Zero-Learning Curve"</em> philosophy.</p>
-            <p>Our mission is to empower micro-entrepreneurs, roadside food vendors, weekend market stalls, and artisan bakeries with intelligent mobile applications that streamline daily tasks, eliminate administrative overhead, and maximize profitability—all without requiring complex technical training or reliable internet access.</p>
+      <p>An offline-first Point-of-Sale and inventory management app for small businesses. Scan a QR code, checkout, and track stock — all within seconds, no internet required. Supports Thai and English with multi-currency display.</p>
+
+      <div class="badge-row">
+        <span class="tag">Free</span>
+        <span class="tag">Offline-first</span>
+        <span class="tag">Android</span>
+        <span class="tag">Thai / English</span>
+        <span class="tag">Multi-currency</span>
+      </div>
+
+      <div class="features">
+        <div class="feature-item">
+          <div class="icon">📷</div>
+          <h4>Scan &amp; Sell</h4>
+          <p>QR code POS with smart double-scan prevention (1–5 s cooldown)</p>
         </div>
-
-        <!-- รายการผลิตภัณฑ์/แอปพลิเคชัน (Our Applications) -->
-        <div class="card">
-            <h2>Featured Applications</h2>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <h3>CHO-CHA-DA SME Assistant (v1.0)</h3>
-                    <p>An offline-first Point of Sale (POS) and inventory companion tailored for retail booths, street food stalls, and bakeries. It enables vendors to execute error-free checkouts and stock updates within 5 seconds.</p>
-                    <strong>Key Subsystems:</strong>
-                    <ul>
-                        <li><strong>Scan & Sell Terminal:</strong> Instant QR-code order building with a built-in double-scan prevention slider (1-5 seconds).</li>
-                        <li><strong>Local Inventory Tracker:</strong> Smart low-stock visual alerts and raw materials auditing.</li>
-                        <li><strong>Secure Ecosystem:</strong> Enterprise-grade 6-digit PIN and biometric fingerprint verification.</li>
-                        <li><strong>Data Independence:</strong> 100% offline database storage with Excel-compatible CSV data backup.</li>
-                    </ul>
-                    <!-- ลิงก์ไปยังหน้า Privacy Policy และ คู่มือที่จำเป็นต้องใช้ควบคู่กันบนสโตร์ -->
-                    <a href="https://maechada2024.github.io/chochada-sme-assistant/docs/privacy-ccd-sme-assistant.html" class="btn-link" target="_blank">View Privacy Policy</a>
-                    <a href="https://maechada2024.github.io/chochada-sme-assistant/docs/manual.html" class="btn-link" style="margin-left: 10px;" target="_blank">View User Guide</a>
-                </div>
-
-            </div>
+        <div class="feature-item">
+          <div class="icon">📦</div>
+          <h4>Inventory Tracking</h4>
+          <p>Real-time stock with low-stock alerts and raw material management</p>
         </div>
-
-        <!-- ข้อมูลติดต่อและการปฏิบัติตามเกณฑ์ (Contact & Compliance) -->
-        <div class="card">
-            <h2>Developer Compliance & Legal</h2>
-            <p>We strictly prioritize data privacy and application safety. All data handled by applications developed under the <strong>MaeChada</strong> brand is isolated locally on the user's mobile hardware to ensure ultimate business confidentiality and security.</p>
-            <p>For support inquiries, system audits, or application feedback, please access our official repositories or contact our development team through the designated store support channels.</p>
+        <div class="feature-item">
+          <div class="icon">📊</div>
+          <h4>Sales Reports</h4>
+          <p>Daily, monthly and all-time summaries by payment channel</p>
         </div>
+        <div class="feature-item">
+          <div class="icon">🔐</div>
+          <h4>PIN + Biometric Lock</h4>
+          <p>6-digit PIN and fingerprint / Face ID protection for shop data</p>
+        </div>
+        <div class="feature-item">
+          <div class="icon">🏷️</div>
+          <h4>QR Code Generator</h4>
+          <p>Single or batch-print QR labels with shop name and price</p>
+        </div>
+        <div class="feature-item">
+          <div class="icon">💾</div>
+          <h4>CSV Backup &amp; Restore</h4>
+          <p>Export and restore all data — works with Google Drive, LINE Keep</p>
+        </div>
+      </div>
 
-    </main>
+      <div class="btn-row">
+        <span class="store-badge">
+          <svg viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.83 1-.83 1.5-.5l15 8.5-15 8.5c-.5.33-1.5.33-1.5-.5z"/></svg>
+          Coming soon on Google Play
+        </span>
+        <a href="https://maechada2024.github.io/chochada-sme-assistant/docs/privacy-ccd-sme-assistant.html" class="btn btn-outline" target="_blank">🔒 Privacy Policy</a>
+        <a href="https://maechada2024.github.io/chochada-sme-assistant/docs/manual.html" class="btn btn-outline" target="_blank">📖 User Manual</a>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <p>Copyright © 2026 MaeChada (แม่ชฎา). All rights reserved.</p>
-    </footer>
+  <!-- Privacy & Compliance -->
+  <div class="card">
+    <h2>Privacy &amp; Compliance</h2>
+    <p>All applications published under the MaeChada brand are built with privacy-by-design principles and comply with Google Play Developer Programme Policies.</p>
+    <ul class="compliance-list">
+      <li><span class="check">✓</span> All user data stored locally on-device — no external transmission (Standalone version)</li>
+      <li><span class="check">✓</span> No personal information collected: no name, email, phone, or GPS location</li>
+      <li><span class="check">✓</span> PIN stored as SHA-256 hash + salt — the actual PIN is never readable by anyone</li>
+      <li><span class="check">✓</span> Camera used exclusively for QR code scanning — no photos captured or stored</li>
+      <li><span class="check">✓</span> No third-party advertising SDKs, analytics trackers, or data brokers</li>
+      <li><span class="check">✓</span> Users can export, clear, or permanently delete all data at any time</li>
+      <li><span class="check">✓</span> Not directed at children under 13 years of age (COPPA compliant)</li>
+    </ul>
+  </div>
+
+  <!-- Support -->
+  <div class="card">
+    <h2>Support &amp; Response Policy</h2>
+    <table class="support-table">
+      <thead>
+        <tr><th>Request Type</th><th>Channel</th><th>Response Time</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>General support &amp; bug reports</td><td><a href="mailto:dr.chadchadaporn@gmail.com">dr.chadchadaporn@gmail.com</a></td><td>Within 3 business days</td></tr>
+        <tr><td>Privacy / data deletion requests</td><td><a href="mailto:dr.chadchadaporn@gmail.com">dr.chadchadaporn@gmail.com</a></td><td>Within 30 days</td></tr>
+        <tr><td>User manual &amp; guides</td><td><a href="https://maechada2024.github.io/chochada-sme-assistant/docs/manual.html" target="_blank">Online Manual</a></td><td>Always available</td></tr>
+        <tr><td>Play Store reviews</td><td>Google Play in-app reply</td><td>Within 7 days</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Contact -->
+  <div class="card">
+    <h2>Contact &amp; Links</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <span class="contact-icon">✉️</span>
+        <div>
+          <h4>Developer Email</h4>
+          <a href="mailto:dr.chadchadaporn@gmail.com">dr.chadchadaporn@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">🐙</span>
+        <div>
+          <h4>GitHub</h4>
+          <a href="https://github.com/maechada2024" target="_blank">github.com/maechada2024</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">🔒</span>
+        <div>
+          <h4>Privacy Policy</h4>
+          <a href="https://maechada2024.github.io/chochada-sme-assistant/docs/privacy-ccd-sme-assistant.html" target="_blank">SME Assistant Privacy Policy</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">📍</span>
+        <div>
+          <h4>Location</h4>
+          <p>Thailand 🇹🇭</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 MaeChada (แม่ชฎา) · Chadchadaporn Pukkaew · All rights reserved.</p>
+  <p>
+    <a href="mailto:dr.chadchadaporn@gmail.com">✉ Contact</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/maechada2024" target="_blank">GitHub</a>
+    &nbsp;·&nbsp;
+    <a href="https://maechada2024.github.io/chochada-sme-assistant/docs/privacy-ccd-sme-assistant.html" target="_blank">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="https://maechada2024.github.io/chochada-sme-assistant/docs/manual.html" target="_blank">User Manual</a>
+  </p>
+</footer>
 
 </body>
 </html>
