@@ -24,7 +24,7 @@ This repository hosts the public developer profile for MaeChada, an independent 
 
 ## Contact
 
-📧 dr.chadchadaporn@gmail.com
+📧 maechada2026@gmail.com
 
 ---
 
